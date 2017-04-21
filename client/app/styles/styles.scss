@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import 'vendor/normalize';
+@import 'variables';
+@import 'core';
+
+@import 'components/header';
+@import 'components/sidebar';
+@import 'components/content';
+@import 'components/footer';

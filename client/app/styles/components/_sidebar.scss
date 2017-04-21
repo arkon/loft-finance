@@ -1,0 +1,29 @@
+.app__sidebar {
+  min-width: 10em;
+  padding: 1em;
+}
+
+.app__sidebar__history {
+}
+
+.app__sidebar__history__item {
+  font-size: 0.85em;
+  list-style: none;
+  padding: 0.5em 0;
+
+  + .app__sidebar__history__item {
+    border-top: 1px solid rgba($black, 0.35);
+  }
+}
+
+.app__sidebar__history__item__symbol {
+  font-size: 1rem;
+}
+
+.app__sidebar__history__item__symbol--pos {
+  color: $green;
+}
+
+.app__sidebar__history__item__symbol--neg {
+  color: $red;
+}

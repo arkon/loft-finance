@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app,
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-color: $grey;
+  font: 400 16px/1.5 $fonts;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.app__wrapper {
+  display: flex;
+  flex: 1 0 auto;
+}
