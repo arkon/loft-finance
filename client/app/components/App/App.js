@@ -27,7 +27,7 @@ class App extends Component {
       .then(res => res.json())
       .then(res => {
         const pastSearches = this.state.pastSearches;
-        pastSearches.push(res);
+        pastSearches.unshift(res);
 
         this.setState({
           currentData: res,
