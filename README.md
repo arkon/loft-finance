@@ -2,7 +2,9 @@
 
 A quick POC created in 2 hours to showcase some web dev skills.
 
-Goals:
+
+## Goals
+
 - Use data from Google Finance to show stock data
 - Create some form of MVC web app, making use of some ES2015 features like promises
 - Webpage should have a header, footer, and sidebar/content
@@ -16,19 +18,21 @@ Goals:
   - Display data content in a nice way
 - Should support fairly new browsers (+1, -2) + IE11
 
-Some reference links:
+
+## References
+
 - https://www.google.com/finance?q=GOOG
 - https://groups.google.com/forum/#!topic/google-finance-apis/xOBpvoNQ2Ec
 - http://finance.google.com/finance/info?client=ig&q=GOOG
 - https://www.google.com/finance/historical?q=GOOG&output=csv
 
-TODO:
+
+## TODO
+
 - [ ] Better organization of styles/components
 - [ ] Break out searchbar into component
 - [ ] Better handle errors
 - [ ] More thorough testing of data fetching module
 - [ ] Better styling
-- [ ] Figure out how to get Node to do ES2015 things nicely (e.g. import/export)
 - [ ] Ensure autoprofixer is configured properly
 - [ ] Persist history across sessions
-- [ ] Tweak webpack config (e.g. better minification)

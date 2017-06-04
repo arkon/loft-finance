@@ -5,9 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const helpers = require('./helpers');
 
-const NODE_ENV = process.env.NODE_ENV;
-const isProd = NODE_ENV === 'production';
-
 module.exports = {
   entry: {
     'app': [
@@ -45,8 +42,9 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                'sourceMap': true,
-                'importLoaders': 1
+                minimize: true,
+                sourceMap: true,
+                importLoaders: 1
               }
             },
             {
@@ -70,18 +68,28 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(NODE_ENV)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     }),
 
     new HtmlWebpackPlugin({
       template: helpers.root('client/public/index.html'),
-      inject: 'body'
+      inject: 'body',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      }
     }),
 
     new ExtractTextPlugin({
-      filename: 'css/[name].[hash].css',
-      disable: !isProd
+      filename: 'css/[name].[hash].css'
     })
   ]
 };
